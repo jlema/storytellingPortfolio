@@ -1,4 +1,31 @@
+$primary-font-family: 'Halant', serif;
+$secondary-font-family: 'Satisfy', cursive;
+$tertiary-font-family: 'Montserrat', sans-serif;
+
 .jumbotron {
   margin: 0;
   padding: 30px;
+}
+
+li {
+  color: black;
+}
+
+body {
+  font-family: 'Gothic A1', sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.button {
+  font-family: 'Gothic A1', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
