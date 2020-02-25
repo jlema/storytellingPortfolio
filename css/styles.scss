@@ -1,9 +1,12 @@
-$primary-font-family: "Roboto",Helvetica,Arial,sans-serif;
+$primary-font-family: "Roboto", Helvetica, Arial, sans-serif;
 $secondary-font-family: "Aclonica";
 $background-dark-color: #d5d0cc;
 $background-medium-color: #f9f4f0;
 $text-dark-color: #000000;
 $text-light-color: #ffffff;
+$sidebar-width: 12rem;
+$navbar-height: 6rem;
+$breakpoint-md: 768px;
 
 body {
   font-family: $primary-font-family;
@@ -42,33 +45,33 @@ h6 {
 /*
 *
 * ==========================================
-* CUSTOM UTIL CLASSES
-* From: https://bootstrapious.com/p/bootstrap-vertical-navbar
+* VERTICAL NAVBAR CUSTOM UTIL CLASSES
+* Adapted from: https://bootstrapious.com/p/bootstrap-vertical-navbar
 * ==========================================
 *
 */
 
 .vertical-nav {
-  min-width: 17rem;
-  width: 17rem;
-  height: 100vh;
+  min-width: $sidebar-width;
+  width: $sidebar-width;
+  height: calc(100vh - #{$navbar-height});
   position: fixed;
-  top: 0;
+  top: $navbar-height;
   left: 0;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   transition: all 0.4s;
 }
 
 .page-content {
-  width: calc(100% - 17rem);
-  margin-left: 17rem;
+  width: calc(100% - #{$sidebar-width});
+  margin-left: $sidebar-width;
   transition: all 0.4s;
 }
 
 /* for toggle behavior */
 
 #sidebar.active {
-  margin-left: -17rem;
+  margin-left: -$sidebar-width;
 }
 
 #content.active {
@@ -76,9 +79,9 @@ h6 {
   margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-md) {
   #sidebar {
-    margin-left: -17rem;
+    margin-left: -$sidebar-width;
   }
   #sidebar.active {
     margin-left: 0;
@@ -88,7 +91,7 @@ h6 {
     margin: 0;
   }
   #content.active {
-    margin-left: 17rem;
-    width: calc(100% - 17rem);
+    margin-left: $sidebar-width;
+    width: calc(100% - #{$sidebar-width});
   }
 }
