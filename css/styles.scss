@@ -1,31 +1,94 @@
-$primary-font-family: 'Halant', serif;
-$secondary-font-family: 'Satisfy', cursive;
-$tertiary-font-family: 'Montserrat', sans-serif;
+$primary-font-family: "Roboto",Helvetica,Arial,sans-serif;
+$secondary-font-family: "Aclonica";
+$background-dark-color: #d5d0cc;
+$background-medium-color: #f9f4f0;
+$text-dark-color: #000000;
+$text-light-color: #ffffff;
+
+body {
+  font-family: $primary-font-family;
+  font-weight: 400;
+  color: $text-dark-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $secondary-font-family;
+  font-weight: 100;
+}
 
 .jumbotron {
   margin: 0;
   padding: 30px;
 }
 
-li {
-  color: black;
+.navbar {
+  background-color: $background-dark-color;
 }
 
-body {
-  font-family: 'Gothic A1', sans-serif;
-  font-weight: 300;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+.btn {
+  font-family: $secondary-font-family;
   font-weight: 400;
-  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 1px;
+  background-color: $background-dark-color;
+  color: $text-light-color;
 }
 
-.button {
-  font-family: 'Gothic A1', sans-serif;
-  font-weight: 600;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* From: https://bootstrapious.com/p/bootstrap-vertical-navbar
+* ==========================================
+*
+*/
+
+.vertical-nav {
+  min-width: 17rem;
+  width: 17rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s;
+}
+
+.page-content {
+  width: calc(100% - 17rem);
+  margin-left: 17rem;
+  transition: all 0.4s;
+}
+
+/* for toggle behavior */
+
+#sidebar.active {
+  margin-left: -17rem;
+}
+
+#content.active {
+  width: 100%;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -17rem;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #content {
+    width: 100%;
+    margin: 0;
+  }
+  #content.active {
+    margin-left: 17rem;
+    width: calc(100% - 17rem);
+  }
 }
