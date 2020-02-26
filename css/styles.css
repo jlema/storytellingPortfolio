@@ -27,6 +27,15 @@ h6 {
   background-color: #d5d0cc;
   color: #ffffff; }
 
+/* For constraining video within cards */
+.video-fluid {
+  width: 100%;
+  height: auto; }
+
+.card iframe .embed-responsive-item {
+  min-width: 480px !important;
+  min-height: 270px !important; }
+
 /*
 *
 * ==========================================
