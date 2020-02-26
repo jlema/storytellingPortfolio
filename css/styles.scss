@@ -1,3 +1,8 @@
+// Import Bootstrap functions, variables, mixins
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
 $primary-font-family: "Roboto", Helvetica, Arial, sans-serif;
 $secondary-font-family: "Aclonica";
 $background-dark-color: #d5d0cc;
@@ -6,7 +11,6 @@ $text-dark-color: #000000;
 $text-light-color: #ffffff;
 $sidebar-width: 12rem;
 $navbar-height: 6rem;
-$breakpoint-md: 768px;
 
 body {
   font-family: $primary-font-family;
@@ -42,18 +46,16 @@ h6 {
   color: $text-light-color;
 }
 
-/* For constraining video within cards */
-.video-fluid {
-  width: 100%;
-  height: auto;
-}
-
-.card {
-  iframe {
-    .embed-responsive-item {
-      min-width: 480px !important;
-      min-height: 270px !important;
-    }
+/* For responsive card stacking */
+.card-columns {
+  @include media-breakpoint-only(xl) {
+    column-count: 3;
+  }
+  @include media-breakpoint-only(lg) {
+    column-count: 2;
+  }
+  @include media-breakpoint-down(md) {
+    column-count: 1;
   }
 }
 
@@ -94,7 +96,9 @@ h6 {
   margin: 0;
 }
 
-@media (max-width: $breakpoint-md) {
+/* hide sidebar for devices smaller than md */
+
+@include media-breakpoint-down(sm) {
   #sidebar {
     margin-left: -$sidebar-width;
   }

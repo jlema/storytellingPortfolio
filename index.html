@@ -29,7 +29,7 @@
             </ul>
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    Project Name
+                    Overview
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto d-none d-md-block">
@@ -47,13 +47,13 @@
             <div class="vertical-nav bg-white" id="sidebar">
                 <ul class="nav flex-column bg-white mb-0">
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-dark font-italic bg-light">Overview</a>
+                        <a href="#" class="nav-link text-dark font-italic bg-light" id="topics_overview">Overview</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link dropdown-togle" data-target="#topicsSubmenu"
                             data-toggle="collapse">Topics</a>
                     </li>
-                    <ul class="collapse ml-2 list-unstyled" id="topicsSubmenu" aria-expanded="false">
+                    <ul class="ml-2 list-unstyled" id="topicsSubmenu" aria-expanded="false">
                         <li class="nav-item">
                             <a href="#" class="nav-link text-dark font-italic">Topic A</a>
                         </li>
@@ -61,7 +61,7 @@
                             <a href="#" class="nav-link text-dark font-italic">Topic B</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-dark font-italic">Topic C</a>
+                            <a href="#" class="nav-link text-dark font-italic" id="topics_seattleOpera">Seattle Opera</a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link text-dark font-italic">...</a>
@@ -113,7 +113,7 @@
                 </div>
 
                 <div class="card-columns">
-                    <div class="card">
+                    <div class="card" id="card_aadv">
                         <img class="card-img-top" src="https://photos.smugmug.com/photos/i-Vs77fpw/0/M/i-Vs77fpw-M.jpg"
                             alt="Card image cap">
                         <div class="card-body">
@@ -121,7 +121,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" id="card_behindOpera">
                         <img class="card-img-top" src="https://photos.smugmug.com/photos/i-XfnQ8F2/2/M/i-XfnQ8F2-M.jpg"
                             alt="Card image cap">
                         <div class="card-body">
@@ -130,7 +130,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" id="card_capitalOpera">
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item"
                                 src="https://www.youtube.com/embed/u6tS4XfTbeE?controls=0&rel=0&autoplay=1&mute=1&loop=1&playlist=u6tS4XfTbeE">
@@ -141,7 +141,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" id="card_bouchra">
                         <img class="card-img-top" src="https://photos.smugmug.com/photos/i-4mP9wJT/0/M/i-4mP9wJT-M.jpg"
                             alt="Card image cap">
                         <div class="card-body">
@@ -149,7 +149,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" id="card_ecotraveller">
                         <img class="card-img-top" src="https://photos.smugmug.com/photos/i-xvjDP9L/1/M/i-xvjDP9L-M.jpg"
                             alt="Card image cap">
                         <div class="card-body">
@@ -157,7 +157,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" id="card_gadventures">
                         <img class="card-img-top" src="https://photos.smugmug.com/photos/i-8zStx3r/1/M/i-8zStx3r-M.jpg"
                             alt="Card image cap">
                         <div class="card-body">
@@ -165,7 +165,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" id="card_highPakistan">
                         <img class="card-img-top" src="https://photos.smugmug.com/photos/i-Z5kH3dR/1/M/i-Z5kH3dR-M.jpg"
                             alt="Card image cap">
                         <div class="card-body">
@@ -173,7 +173,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" id="card_jordanTrail">
                         <img class="card-img-top" src="https://photos.smugmug.com/photos/i-8ngQgHT/0/M/i-8ngQgHT-M.jpg"
                             alt="Card image cap">
                         <div class="card-body">
@@ -181,7 +181,15 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" id="card_shadowAni">
+                        <img class="card-img-top" src="https://photos.smugmug.com/photos/i-gbHBHz6/0/M/i-gbHBHz6-M.jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-title">Living in the Shadow of Ani. Eastern Turkey.</p>
+                        </div>
+                    </div>
+
+                    <div class="card" id="card_katyaKabanova">
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item"
                                 src="https://www.youtube.com/embed/cimWFs_yOKE?controls=0&rel=0&autoplay=1&mute=1&loop=1&playlist=cimWFs_yOKE">
@@ -192,7 +200,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" id="card_jordanBeauty">
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item"
                                 src="https://www.youtube.com/embed/oORu5XrFIkU?controls=0&rel=0&autoplay=1&mute=1&loop=1&playlist=oORu5XrFIkU">
@@ -203,15 +211,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
-                        <img class="card-img-top" src="https://photos.smugmug.com/photos/i-gbHBHz6/0/M/i-gbHBHz6-M.jpg"
-                            alt="Card image cap">
-                        <div class="card-body">
-                            <p class="card-title">Living in the Shadow of Ani. Eastern Turkey.</p>
-                        </div>
-                    </div>
-
-                    <div class="card">
+                    <div class="card" id="card_planeterra">
                         <img class="card-img-top" src="https://photos.smugmug.com/photos/i-JFhsFQP/1/M/i-JFhsFQP-M.jpg"
                             alt="Card image cap">
                         <div class="card-body">
@@ -219,7 +219,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" id="card_warOnWalls">
                         <img class="card-img-top" src="https://photos.smugmug.com/photos/i-LgBhThf/0/L/i-LgBhThf-L.jpg"
                             alt="Card image cap">
                         <div class="card-body">
@@ -227,7 +227,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" id="card_artfullyOpera">
                         <img class="card-img-top" src="https://photos.smugmug.com/photos/i-q5ScvKm/0/L/i-q5ScvKm-L.jpg"
                             alt="Card image cap">
                         <div class="card-body">
