@@ -28,8 +28,8 @@
                 </li>
             </ul>
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    Overview
+                <li class="nav-item" id="projectName">
+                    &nbsp;
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto d-none d-md-block">
@@ -47,27 +47,25 @@
             <div class="vertical-nav bg-white" id="sidebar">
                 <ul class="nav flex-column bg-white mb-0">
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-dark font-italic bg-light" id="topics_overview">Overview</a>
+                        <a href="#" class="nav-link text-dark font-italic bg-light border" id="overview">Overview</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link dropdown-togle" data-target="#topicsSubmenu"
-                            data-toggle="collapse">Topics</a>
+                        <a class="nav-link text-dark dropdown-toggle" href="#topicsSubmenu" role="button"
+                            data-toggle="collapse" aria-expanded="true" aria-controls="topicsSubmenu">Topics</a>
                     </li>
-                    <ul class="ml-2 list-unstyled" id="topicsSubmenu" aria-expanded="false">
+                    <ul class="collapse show ml-2 list-unstyled" id="topicsSubmenu">
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-dark font-italic">Topic A</a>
+                            <a href="#" class="nav-link text-dark font-italic" id="topics_conservation">Conservation</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-dark font-italic">Topic B</a>
+                            <a href="#" class="nav-link text-dark font-italic" id="topics_seattleOpera">Seattle
+                                Opera</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-dark font-italic" id="topics_seattleOpera">Seattle Opera</a>
+                            <a href="#" class="nav-link text-dark font-italic" id="topics_travel">Travel</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-dark font-italic">...</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link text-dark font-italic">...</a>
+                            <a href="#" class="nav-link text-dark font-italic" id="women_leaders">Women Leaders</a>
                         </li>
                     </ul>
                     <li class="nav-item">
@@ -93,22 +91,14 @@
                         <i class="fa fa-bars mr-2"></i><small class="text-muted">Menu</small>
                     </button>
                 </div>
-                <div class="row">
-                    <h2>Hello world!</h2>
+
+                <div class="row" id="div_overview">
+                    <h2>Overview</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        labore et dolore magna aliqua.<br />Ut enim ad minim veniam, quis nostrud exercitation ullamco
                         laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Pri posse graeco
-                        definitiones cu, id eam populo quaestio adipiscing, usu quod malorum te. Offendit eleifend
-                        moderatius ex vix, quem odio mazim et qui, purto expetendis cotidieque quo cu, veri persius
-                        vituperata ei nec. Offendit eleifend moderatius ex vix, quem odio mazim et qui, purto expetendis
-                        cotidieque quo cu, veri persius vituperata ei nec. Sonet cotidieque ei vel. Offendit eleifend
-                        moderatius ex vix, quem odio mazim et qui, purto expetendis cotidieque quo cu, veri persius
-                        vituperata ei nec. Scripta periculis ei eam, te pro movet reformidans. Pri posse graeco
-                        definitiones cu, id eam populo quaestio adipiscing, usu quod malorum te. Te quo atqui libris,
-                        dicta aeque usu an. Offendit eleifend moderatius ex vix, quem odio mazim et qui, purto
-                        expetendis cotidieque quo cu, veri persius vituperata ei nec. Harum repudiandae sea at.
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
                     </p>
                 </div>
 
@@ -241,14 +231,9 @@
         </div>
     </div>
 
-
-
-
-
-
     <!-- jQuery must come first, then Popper.js, then the Bootstrap Javascript plugins -->
     <!-- build:js js/main.js -->
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
