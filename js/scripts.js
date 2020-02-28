@@ -58,7 +58,7 @@ $(function () {
 
   /* Show all topics */
   $("#overview").on("click", function () {
-    showTopic(cardsAll, "Overview");
+    showTopic(cardsAll, "");
     highlightTopic("#overview");
     rearrangeColumns(3);
     $("#div_overview").fadeIn(fadeInSpeed);
