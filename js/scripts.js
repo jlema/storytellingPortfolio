@@ -1,5 +1,18 @@
 $(function () {
 
+  // For all card-bodies
+  // Reduce vertical padding, keep horizontal padding to 1
+  // Center text
+  $(function() {
+    $(".card-body").addClass("pb-1 pt-2 px-1 text-center");
+  })
+
+  // For all cards
+  // Remove borders
+  $(function() {
+    $(".card").addClass("border-0");
+  })
+
   const fadeInSpeed = 900;
 
   // Sidebar toggle behavior
