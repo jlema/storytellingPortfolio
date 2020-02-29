@@ -1,3 +1,8 @@
+// Import Bootstrap functions, variables, mixins
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
 $primary-font-family: "Roboto", Helvetica, Arial, sans-serif;
 $secondary-font-family: "Aclonica";
 $background-dark-color: #d5d0cc;
@@ -5,8 +10,7 @@ $background-medium-color: #f9f4f0;
 $text-dark-color: #000000;
 $text-light-color: #ffffff;
 $sidebar-width: 12rem;
-$navbar-height: 6rem;
-$breakpoint-md: 768px;
+$navbar-height: 7rem;
 
 body {
   font-family: $primary-font-family;
@@ -22,6 +26,10 @@ h5,
 h6 {
   font-family: $secondary-font-family;
   font-weight: 100;
+}
+
+a {
+  color: $text-dark-color;
 }
 
 .jumbotron {
@@ -42,17 +50,36 @@ h6 {
   color: $text-light-color;
 }
 
-/* For constraining video within cards */
-.video-fluid {
-  width: 100%;
-  height: auto;
+/* For responsive card stacking */
+.card-columns {
+  @include media-breakpoint-only(xl) {
+    column-count: 3;
+  }
+  @include media-breakpoint-only(lg) {
+    column-count: 2;
+  }
+  @include media-breakpoint-down(md) {
+    column-count: 1;
+  }
 }
 
-.card {
-  iframe {
-    .embed-responsive-item {
-      min-width: 480px !important;
-      min-height: 270px !important;
+/* To add the caret to the collapsible menu */
+.dropdown-toggle[aria-expanded="true"]:after {
+  transform: rotate(180deg);
+}
+/*for animation*/
+.dropdown-toggle:after {
+  transition: 0.5s;
+}
+
+/* When in a gallery page, reduce the number of columns to 1 */
+.gallery-content {
+  .card-columns {
+    @include media-breakpoint-only(xl) {
+      column-count: 2;
+    }
+    @include media-breakpoint-down(lg) {
+      column-count: 1;
     }
   }
 }
@@ -94,7 +121,9 @@ h6 {
   margin: 0;
 }
 
-@media (max-width: $breakpoint-md) {
+/* hide sidebar for devices smaller than md */
+
+@include media-breakpoint-down(sm) {
   #sidebar {
     margin-left: -$sidebar-width;
   }
