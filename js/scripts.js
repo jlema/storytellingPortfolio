@@ -3,13 +3,13 @@ $(function () {
   // For all card-bodies
   // Reduce vertical padding, keep horizontal padding to 1
   // Center text
-  $(function() {
+  $(function () {
     $(".card-body").addClass("pb-1 pt-2 px-1 text-center");
   })
 
   // For all cards
   // Remove borders
-  $(function() {
+  $(function () {
     $(".card").addClass("border-0");
   })
 
@@ -113,4 +113,19 @@ $(function () {
     }
   }
 
+  // Scramble email address
+  function scramble_mail(name, domain, tld) {
+    var scrambled = '<a class="text-dark" href="' + 'ma' + 'il' + 'to:' + name;
+    scrambled += '@' + domain + '.' + tld + '">';
+    scrambled += name + '@' + domain + '.' + tld
+    scrambled += '<' + '/a>';
+    return scrambled;
+  }
+
+  $(function () {
+    scrambled = scramble_mail("genevieve", "genevievehathaway", "com", "e-mail");
+    $("#emailLocation").html(scrambled + "<br />Seattle, WA USA");
+  })
+
 });
+

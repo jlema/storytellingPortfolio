@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
+    <link rel="stylesheet" href="node_modules/ekko-lightbox/dist/ekko-lightbox.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <!-- endbuild -->
     <link href="https://fonts.googleapis.com/css?family=Aclonica%7CRoboto&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@
         <nav class="navbar navbar-expand-md sticky-top py-4 px-0 mb-4 navbar-light bg-white">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <h4 class="m-0">genevieve hathaway</h4>
+                    <h4 class="m-0"><a href="index.html" class="text-dark">genevieve hathaway</a></h4>
                     <p class="font-weight-light text-muted mb-0 small">stills + motion storytelling</p>
                 </li>
             </ul>
@@ -33,9 +33,7 @@
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto d-none d-md-block">
-                <li class="nav-item">
-                    genevieve@genevievehathaway.com<br />
-                    Seattle, WA USA
+                <li class="nav-item" id="emailLocation">
                 </li>
             </ul>
         </nav>
@@ -47,27 +45,8 @@
             <div class="vertical-nav bg-white" id="sidebar">
                 <ul class="nav flex-column bg-white mb-0">
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-dark bg-light border" id="overview">Overview</a>
+                        <a href="index.html" class="nav-link bg-light border" id="overview">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark dropdown-toggle" href="#topicsSubmenu" role="button"
-                            data-toggle="collapse" aria-expanded="true" aria-controls="topicsSubmenu">Topics</a>
-                    </li>
-                    <ul class="collapse show ml-2 list-unstyled" id="topicsSubmenu">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link text-dark font-italic" id="topics_conservation">Conservation</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link text-dark font-italic" id="topics_seattleOpera">Seattle
-                                Opera</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link text-dark font-italic" id="topics_travel">Travel</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link text-dark font-italic" id="women_leaders">Women Leaders</a>
-                        </li>
-                    </ul>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Blog</a>
                     </li>
@@ -146,7 +125,7 @@
         <div class="page-content px-5 py-0 gallery-content" id="content">
             <div class="row mb-4">
                 <button id="sidebarCollapse" type="button"
-                    class="btn btn-light bg-white border-dark pr-1 rounded-pill shadow-sm text-dark d-md-none">
+                    class="btn btn-light bg-white border-dark pr-1 rounded-pill shadow-sm d-md-none text-dark">
                     <i class="fa fa-bars mr-2"></i><small class="text-muted">Menu</small>
                 </button>
             </div>
@@ -280,7 +259,7 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+    <script src="node_modules/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/gallery.js"></script>
     <!-- endbuild -->
